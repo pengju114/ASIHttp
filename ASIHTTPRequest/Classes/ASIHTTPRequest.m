@@ -283,6 +283,8 @@ static NSInteger    UniqueIDCounter  =  1;
     self = [super init];
     if (self) {
         uniqueID  =  UniqueIDCounter++;
+        expectedDataFormat = kASIExpectedDataDictionary;
+        responseDataFormat = kASIResponseDataJSON;
     }
     return self;
 }
@@ -5154,4 +5156,6 @@ static NSInteger    UniqueIDCounter  =  1;
 @synthesize uniqueID;
 @synthesize requestCode;
 @synthesize extraData;
+@synthesize expectedDataFormat;
+@synthesize responseDataFormat;
 @end
